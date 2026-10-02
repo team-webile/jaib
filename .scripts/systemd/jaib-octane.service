@@ -1,0 +1,21 @@
+[Unit]
+Description=Jaib Laravel Octane (FrankenPHP)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=www-data
+WorkingDirectory=/var/www/api.jaib.co/backend
+ExecStart=/usr/bin/php artisan octane:frankenphp --port=8000 --max-requests=500
+Restart=always
+RestartSec=5
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+Environment="APP_ENV=production"
+Environment="APP_DEBUG=false"
+
+[Install]
+WantedBy=multi-user.target

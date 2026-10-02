@@ -1,0 +1,22 @@
+# Laravel
+/backend/vendor/
+/backend/node_modules/
+/backend/.env
+/backend/.env.backup
+/backend/.env.production
+/backend/storage/*.key
+/backend/storage/logs/*
+/backend/bootstrap/cache/*
+!/backend/storage/logs/.gitkeep
+!/backend/bootstrap/cache/.gitkeep
+
+# Next.js
+/frontend/.next/
+/frontend/out/
+/frontend/node_modules/
+
+# Misc
+.DS_Store
+*.log
+.idea/
+.vscode/
